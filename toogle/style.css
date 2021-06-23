@@ -53,14 +53,15 @@
     height: 23px;
   }
   
-  .li-padding::-webkit-scrollbar-track {
+  /* .li-padding::-webkit-scrollbar-track {
      background: #cfcece;         
-  }
+  } */
   
   .li-padding::-webkit-scrollbar-thumb {
     background-color: rgb(194, 189, 189);   
     border-radius: 20px;       
     border: 1px solid darkgray;
+    max-height: 10px!important;
    
   }
 .ul-deneme{
