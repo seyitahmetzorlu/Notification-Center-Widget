@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seyit Ahmet ZORLU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -26,7 +27,7 @@
               <li class="nav-item dropdown bell bell-imlec">
                 
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="far fa-bell"></i>
+                  <i class="far fa-bell notification" id="bell"></i>
                 </a>
             
                 <div class="dropdown-menu border" aria-labelledby="navbarDropdownMenuLink">
@@ -37,10 +38,24 @@
                   <div class="notification-header"  style="background-color: #f07734;">
                     
                     <div class="notification-header-baslik">
-                      DISCOVERY OUR DEALS
+                      DISCOVER OUR DEALS
                     </div>
                   </div>
                             <div class="li-padding">
+                              <li class="notification-li">
+                                <div class="notification-image"style="background-image: url('https://dizioyuncu.tv/wp-content/uploads/2021/02/Kirmizi-Oda-Nazlinin-giydigi-kirmizi-kiyafet.jpg')">
+        
+                                </div>
+                                <div class="notification-content">
+                                  <span class="badge badge-warning information" style="background-color: #f07734;">NEW</span>
+                                  <p class="notification-baslik">
+                                    Summer Sale-20% OFF
+                                  </p>
+                                  <p class="notification-text">
+                                    Get 20% off on all t-shirts. Only for today! Check out latest collection.
+                                  </p>
+                                </div>
+                              </li>
                               <li class="notification-li mt-2">
                                 <div class="notification-image"style="background-image: url('https://dizioyuncu.tv/wp-content/uploads/2021/02/Kirmizi-Oda-Nazlinin-giydigi-kirmizi-kiyafet.jpg')">
         
@@ -143,7 +158,8 @@
                 <li class="nav-item dropdown bell bell-imlec">
                   
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="far fa-bell"></i>
+                    <i class="far fa-bell notification" id="bell"></i>
+                    
                   </a>
               
                   <div class="dropdown-menu border" aria-labelledby="navbarDropdownMenuLink">
@@ -154,7 +170,7 @@
                     <div class="notification-header"  style="background-color: #f07734;">
                       
                       <div class="notification-header-baslik">
-                        DISCOVERY OUR DEALS
+                        DISCOVER OUR DEALS
                       </div>
                     </div>
                               <div class="li-padding">
@@ -241,12 +257,38 @@
           <script>
              $('.bell').click(function () {
               console.log("tıklandı");
-           
+              
+                    
+                //     if ($(".border").hasClass("show")) {
+                //      $(".border").removeClass("show");
+                //      console.log("silindi");
+                // }else{ 
+                //     $('.border').addClass('show');
                     $(".bell").removeClass("bell-imlec");
-                   
+                    
+
+                // }
 
                
        });
+       $('.dropdown-menu.border').on('click', function(event){
+   
+                 event.stopPropagation();
+        });
+      //  
+      const $bell = document.getElementById('bell');
+
+
+
+
+$bell.classList.add('notify');
+
+
+$bell.addEventListener("animationend", function(event){
+$bell.classList.remove('notify');
+});
+// 
+       
           </script>
   
      
