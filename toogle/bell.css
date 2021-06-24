@@ -19,14 +19,15 @@
     font-family: "FontAwesome";
     display: block;
     font-size: 1.3rem;
-    color: #8e8b8b;
+    color: #272831;
+    
   }
   
   .notification.notify::before {
-    animation: bell 1s ease-out;
+    animation: bell 0.5s ease-out;
     transform-origin: center top;
   }
-  
+ 
   @keyframes bell {
     0% {transform: rotate(35deg);}
     12.5% {transform: rotate(-30deg);}
