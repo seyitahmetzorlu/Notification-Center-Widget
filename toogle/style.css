@@ -36,7 +36,7 @@
     right: 50px;
 }
 .li-padding{
-    padding:15px;
+    padding:10px;
     max-height: 400px;
     overflow-y: scroll;
      
@@ -44,7 +44,7 @@
     
 }
 .li-padding::-webkit-scrollbar {
-    width: 6px;
+    width: 0px;
     height: 10px;         
        
   }
@@ -82,6 +82,7 @@
     background-color: #fff;
     display: flex;
     position: relative;
+    margin: 6px;
 
 }
 .none{
@@ -141,8 +142,9 @@
     top: 8px;
     right: 37px;
     content: "";
-    border: 0.3rem solid #f07734;
+    border: 5.5px solid #f07734;
     border-radius: 50%;
+    background-color: #f07734;
 }
 .bell .dropdown-toggle::after{display: none!important;}
 
