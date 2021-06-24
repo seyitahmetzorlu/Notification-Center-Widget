@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bell.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,10 +26,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item dropdown bell bell-imlec">
+              <li class="nav-item dropdown bell ">
                 
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="far fa-bell notification" id="bell"></i>
+                  <div id="notification" class="notification bell-imlec"></div>
+                  
                 </a>
             
                 <div class="dropdown-menu border" aria-labelledby="navbarDropdownMenuLink">
@@ -300,10 +303,10 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-                <li class="nav-item dropdown bell bell-imlec">
+                <li class="nav-item dropdown bell">
                   
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="far fa-bell notification" id="bell"></i>
+                    <div id="notification" class="notification bell-imlec"></div>
                     
                   </a>
               
@@ -412,9 +415,10 @@
                 </nav>
                 
       
-              
+                
              
-              
+                
+
                 
 
 
@@ -438,17 +442,11 @@
           <script>
              $('.bell').click(function () {
               console.log("tıklandı");
-              
-                    
-                //     if ($(".border").hasClass("show")) {
-                //      $(".border").removeClass("show");
-                //      console.log("silindi");
-                // }else{ 
-                //     $('.border').addClass('show');
-                    $(".bell").removeClass("bell-imlec");
+          
+                    $(".notification").removeClass("bell-imlec");
                     
 
-                // }
+                
 
                
        });
@@ -457,18 +455,22 @@
                  event.stopPropagation();
         });
       //  
-      const $bell = document.getElementById('bell');
+      const $bell = document.getElementById('notification');
 
 
-
-
-$bell.classList.add('notify');
+  const count = 1
+  
+ 
+  
+  $bell.classList.add('notify');
 
 
 $bell.addEventListener("animationend", function(event){
-$bell.classList.remove('notify');
+  $bell.classList.remove('notify');
 });
-// 
+
+
+
        
           </script>
   

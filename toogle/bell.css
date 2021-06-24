@@ -1,0 +1,39 @@
+
+  
+  .notification {
+    width: 50px;
+    height: inherit;
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  
+  
+  
+  
+  .notification::before {
+    content: "\f0f3";
+    font-family: "FontAwesome";
+    display: block;
+    font-size: 1.3rem;
+    color: #8e8b8b;
+  }
+  
+  .notification.notify::before {
+    animation: bell 1s ease-out;
+    transform-origin: center top;
+  }
+  
+  @keyframes bell {
+    0% {transform: rotate(35deg);}
+    12.5% {transform: rotate(-30deg);}
+    25% {transform: rotate(25deg);}
+    37.5% {transform: rotate(-20deg);}
+    50% {transform: rotate(15deg);}
+    62.5% {transform: rotate(-10deg)}
+    75% {transform: rotate(5deg)}
+    100% {transform: rotate(0);}  
+  }

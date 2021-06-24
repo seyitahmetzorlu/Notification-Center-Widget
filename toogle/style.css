@@ -73,6 +73,7 @@
     /* top: 45px; */
 }
 
+
 .notification-header-baslik{
     font-size: 1.5rem;
     font-weight: 600;
@@ -139,8 +140,8 @@
 .bell-imlec::after{
     display: inline-block;
     position: absolute;
-    top: 8px;
-    right: 37px;
+    top: 3px;
+    right: 12px;
     content: "";
     border: 5.5px solid #f07734;
     border-radius: 50%;
@@ -152,11 +153,11 @@
 
   
   
-.notification {
+/* .notification {
     width: 50px;
     height: inherit;
-    /* color: #000000; */
-    display: flex;
+    /* color: #000000; 
+    display: inline-block;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -165,7 +166,7 @@
   
   .notification::before {
     content: "";
-    display: block;
+    display: inline-block;
   }
   
   .notification.notify::before {
@@ -183,8 +184,8 @@
     75% {transform: rotate(5deg)}
     100% {transform: rotate(0);}  
   }
-  
-  /**/
+   
+  */
 
 @media screen and (max-width:415px){
     .notification-block{width: 100%;position: relative;z-index: 999999;}
